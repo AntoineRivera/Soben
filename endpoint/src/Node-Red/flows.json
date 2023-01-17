@@ -1,0 +1,308 @@
+[
+    {
+        "id": "787cd462276af93d",
+        "type": "tab",
+        "label": "Test node-red MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "793074f7f378fe97",
+        "type": "ui_spacer",
+        "z": "787cd462276af93d",
+        "name": "spacer",
+        "group": "343676916b04ba6e",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "8d9974399273607d",
+        "type": "ui_spacer",
+        "z": "787cd462276af93d",
+        "name": "spacer",
+        "group": "fc5444de2b70b622",
+        "order": 1,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "0eb96348508761db",
+        "type": "mqtt-broker",
+        "name": "mosquittoMQTT",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "home/doors",
+        "birthQos": "0",
+        "birthPayload": "nodered_connexion",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fc5444de2b70b622",
+        "type": "ui_group",
+        "name": "map view",
+        "tab": "54d944257744dbee",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "343676916b04ba6e",
+        "type": "ui_group",
+        "name": "Etats ",
+        "tab": "54d944257744dbee",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "54d944257744dbee",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6c759ec35533b400",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1a5f056cc5edecc2",
+        "type": "mqtt in",
+        "z": "787cd462276af93d",
+        "name": "",
+        "topic": "home/doors/1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "0eb96348508761db",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 70,
+        "y": 200,
+        "wires": [
+            [
+                "a4ca55c319bbfbc2"
+            ]
+        ]
+    },
+    {
+        "id": "a4ca55c319bbfbc2",
+        "type": "function",
+        "z": "787cd462276af93d",
+        "name": "mqtt/topics \"encoder\"",
+        "func": "var receivedData = msg.payload;\nvar etat = { payload: 0 };\n\nif (receivedData == true || receivedData == 1 || receivedData == \"1\"){\n    etat.payload = \"1\";\n}\nelse {\n    etat.payload = \"0\";\n};\n\nreturn etat;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "a2880e24bef0e191",
+                "73cffe4df0677d7d",
+                "116b89546f146399"
+            ]
+        ]
+    },
+    {
+        "id": "a2880e24bef0e191",
+        "type": "ui_template",
+        "z": "787cd462276af93d",
+        "group": "fc5444de2b70b622",
+        "name": "SVG MapView",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<body>\n    <div style=\"display:none;\" id=\"dataDiv\" ng-bind-html=\"msg.payload\"></div>\n\n    <!-- <div ng-if=\"msg.payload === '1'\">OUVERTE</div>\n    <div ng-if=\"msg.payload  === '0'\">FERMEE</div>\n    <img src=\"data:image/jpg; base64, {{msg.payload}}\" class=\"img\"> -->\n\n\n\n    <div ng-if=\"msg.payload  === '1'\">\n        <div class=\"svg_container\">\n            <h2 style=\"text-align: left; transform: translate(-45px, 0);\"> Porte n°1 :</h2>\n        \n            <svg style=\"align-items: center;\" width=\"400\" height=\"300\">\n                <path d=\"M 295 195 V 295 H 5 V 5 H 295 V 95 \" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#003265\"\n                    fill=\"none\" stroke-width=\"5\" />\n                <path id=\"door1\" class=\"door_opened\" d=\"M 295 95 V 195 \" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n                    stroke=\"#D97A00\" fill=\"none\" stroke-width=\"5\" />\n                <path d=\"M 90 7.5 V 45 H 190 V 7.5\" stroke-linecap=\"butt\" stroke-linejoin=\"round\" stroke=\"#003265\" fill=\"none\"\n                    stroke-width=\"5\" />\n                <circle cx=\"295\" cy=\"195\" r=\"5\" fill=\"#003265\" />\n                <circle id=\"radiateur\" cx=\"140\" cy=\"25\" r=\"10\" fill=\"none\"/>\n        \n            </svg>\n        </div>\n    </div>\n\n\n    <div ng-if=\"msg.payload === '0'\">\n\n    <div class=\"svg_container\">\n        <h2 style=\"text-align: left; transform: translate(-45px, 0);\"> Porte n°1 :</h2>\n    \n        <svg style=\"align-items: center;\" width=\"400\" height=\"300\">\n            <path d=\"M 295 195 V 295 H 5 V 5 H 295 V 95 \" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#003265\"\n                fill=\"#FFFFFF\" stroke-width=\"5\" />\n            <path id=\"door1\"  d=\"M 295 95 V 195 \" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n                stroke=\"#D97A00\" fill=\"none\" stroke-width=\"5\" />\n            <path d=\"M 90 7.5 V 45 H 190 V 7.5\" stroke-linecap=\"butt\" stroke-linejoin=\"round\" stroke=\"#003265\" fill=\"none\"\n                stroke-width=\"5\" />\n            <circle cx=\"295\" cy=\"195\" r=\"5\" fill=\"#003265\" />\n            <circle id=\"radiateur\" cx=\"140\" cy=\"25\" r=\"10\" fill=\"#4e9a06\" />\n    \n        </svg>\n    </div>\n    </div>\n\n    \n</body>\n\n\n<style>\n    .image {\n        width: 50%;\n    }\n\n    .nr-dashboard-theme .nr-dashboard-template path {\n    fill: #FFFFFF;\n    }\n\n    body{\n    \n    background-color: white;\n    }\n    \n    #portes{\n    font-family: fira Sans;\n    font-size: 2rem;\n    padding: 0 0 0 30px;\n    border: 3px black;\n    }\n    h3{\n    font-size: 1.3rem;\n    }\n    h2{\n    font-family: fira Sans;\n    font-size: 1.3rem;\n    }\n    \n    .svg_container{\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n    }\n    \n    \n    .door_opened{\n    d: path(\"M 295 195 L 365 125 \");\n    }\n    \n    .radiateur_off{\n    fill: white\n    }\n    \n    .portes.h3:nth-child(0){\n    text-decoration: underline;\n    }\n\n</style>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73cffe4df0677d7d",
+        "type": "ui_led",
+        "z": "787cd462276af93d",
+        "order": 1,
+        "group": "343676916b04ba6e",
+        "width": 0,
+        "height": 0,
+        "label": "Portes : ",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#d97a00",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#f3f3f3",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "116b89546f146399",
+        "type": "ui_led",
+        "z": "787cd462276af93d",
+        "order": 4,
+        "group": "343676916b04ba6e",
+        "width": 0,
+        "height": 0,
+        "label": "Radiateur : ",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#f3f3f3",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    }
+]
